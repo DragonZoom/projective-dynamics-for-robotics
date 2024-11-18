@@ -8,6 +8,26 @@ This project implements a simulation of projective dynamics for robotic applicat
 The pd_sim package uses projective dynamics to simulate deformable bodies in real-time. It utilizes OpenGL and GLFW for rendering, GLEW for OpenGL extension handling, and TinyGLTF for loading GLTF models.
 
 ## Installation
+### With Docker
+
+To build and run the project using Docker, follow these steps:
+
+1. **Build the Docker Image**
+
+From the root of the repository build the Docker image:
+```
+docker build -t projective-dynamics-for-robotics .
+```
+
+2. **Run the Docker Container**
+
+Run the container and start the simulation:
+```
+docker run -it --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --env="MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --gpus all projective-dynamics-for-robotics
+```
+At this point project is ready to launch. Don't forget `source install/setup.bash`. \
+_TODO: there is no video card visible inside the docker, rendering takes place via LLVM pipe_
+
 ### Prerequisites
 * [ROS 2](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html) (tested with ROS2 jazzy)
 * OpenGL
@@ -50,7 +70,7 @@ source install/setup.bash
 ```
 Run the simulation node:
 ```
-ros2 launch pd_sim pd_sim_launch.py
+ros2 launch pd_sim pd_sim_launch.py robot_model:=models/robot_simple.gltf
 ```
 
 ### Parameters

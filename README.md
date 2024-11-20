@@ -100,8 +100,15 @@ MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA gz sim
 ```
 
 ## References
-* [Projective dynamics: fusing constraint projections for fast simulation](https://dl.acm.org/doi/10.1145/2601097.2601116)
+* [Projective dynamics: fusing constraint projections for fast simulation](https://dl.acm.org/doi/10.1145/2601097.2601116), 2014 - code: [ShapeOp](https://shapeop.org/)
+* [Projective Dynamics with Dry Frictional Contact](https://inria.hal.science/hal-02563307v2/document), 2020
+* [DiffCloth: Differentiable Cloth Simulation with Dry Frictional Contact](https://paperswithcode.com/paper/diffcloth-differentiable-cloth-simulation), 2021 - code: [official](https://github.com/omegaiota/DiffCloth?tab=readme-ov-file)
+* [Penetration-free Projective Dynamics on the GPU](https://www.math.ucla.edu/multiples/publication/lan2022pdipc.pdf), 2022 - code: [Fast-Approximate-Root-CCD
+[not official]](https://github.com/Continuous-Collision-Detection/Fast-Approximate-Root-CCD)
+* [Subspace-Preconditioned GPU Projective Dynamics with Contact for Cloth Simulation](https://dl.acm.org/doi/fullHtml/10.1145/3610548.3618157), 2023
 * ROS 2 [tutorials](https://docs.ros.org/en/jazzy/Tutorials.html)
+* [Shapeop](https://shapeop.org/) - a header-only C++ library for static and dynamic geometry processing. It is developed by the Computer Graphics and Geometry Laboratory of EPFL.
+* [bullet3](https://github.com/bulletphysics/bullet3)
 
 
 ## License
